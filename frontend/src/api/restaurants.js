@@ -8,6 +8,7 @@ export const getRestaurants = async () => {
 };
 
 export const addNewRestaurant = async (newName) => {
+
   const response = await fetch(`${API_ENDPOINT}/restaurants`, {
     method: "POST",
     body: JSON.stringify({
@@ -21,17 +22,21 @@ export const addNewRestaurant = async (newName) => {
   const newRestaurant = await response.json();
 
   return newRestaurant;
+  
 };
 
 export const deleteRestaurant = async (id) => {
+
   const response = await fetch(`${API_ENDPOINT}/restaurants/${id}`, {
     method: "DELETE",
   });
 
   return response.status;
+
 };
 
 export const updateRestaurantName = async (id, newName) => {
+
   const response = await fetch(`${API_ENDPOINT}/restaurants/${id}`, {
     method: "PUT",
     body: JSON.stringify({
@@ -43,9 +48,11 @@ export const updateRestaurantName = async (id, newName) => {
   });
 
   return response.status;
+
 };
 
 export const starRestaurant = async (id) => {
+
   const response = await fetch(`${API_ENDPOINT}/restaurants/starred`, {
     method: "POST",
     body: JSON.stringify({
@@ -59,4 +66,5 @@ export const starRestaurant = async (id) => {
   const newStarredRestaurant = await response.json();
 
   return { status: response.status, data: newStarredRestaurant };
+
 };

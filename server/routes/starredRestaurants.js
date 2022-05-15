@@ -1,5 +1,5 @@
 const express = require("express");
-const { v4: uuidv4 } = require("uuid");
+// const { v4: uuidv4 } = require("uuid");
 const router = express.Router();
 const ALL_RESTAURANTS = require("./restaurants").restaurants;
 
@@ -48,54 +48,54 @@ router.get("/", (req, res) => {
 /**
  * Feature 7: Getting a specific starred restaurant.
  */
-router.get("/:id", (req, res) => {
+// router.get("/:id", (req, res) => {
 
 
 
 
 
-})
+// })
 
 
-/**
- * Feature 8: Adding to your list of starred restaurants.
- */
+// /**
+//  * Feature 8: Adding to your list of starred restaurants.
+//  */
 
-router.post("", (req, res) => {
-
-
-
-
-
-  
-})
-
-
-/**
- * Feature 9: Deleting from your list of starred restaurants.
- */
-
- router.delete("", (req, res) => {
+// router.post("", (req, res) => {
 
 
 
 
 
   
-})
+// })
 
-/**
- * Feature 10: Updating your comment of a starred restaurant.
- */
 
- router.put("", (req, res) => {
+// /**
+//  * Feature 9: Deleting from your list of starred restaurants.
+//  */
+
+//  router.delete("", (req, res) => {
 
 
 
 
 
   
-})
+// })
+
+// /**
+//  * Feature 10: Updating your comment of a starred restaurant.
+//  */
+
+//  router.put("", (req, res) => {
+
+
+
+
+
+  
+// })
 
 
 module.exports = router;
